@@ -100,7 +100,7 @@ cp reward_models/reward_model.pkl ../GLN
 cp reward_models/reward_model.pkl ../Transformer
 cp reward_models/reward_model.pkl ../FusionRetro
 cp reward_models/reward_model.pkl ../GraphRetro
-cp ..
+cd ..
 ```
 
 ## (II). REBMRetro Inference
