@@ -271,9 +271,13 @@ python rerank_star.py --beam_size 5
 ## Reference  
 FusionRetro: https://github.com/SongtaoLiu0823/FusionRetro  
 
+
+## Citation
+```
 @inproceedings{liu2024preference,
   title={Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models},
   author={Liu, Songtao and Dai, Hanjun and Zhao, Yue and Liu, Peng},
   booktitle={International Conference on Machine Learning},
   year={2024},
 }
+```
