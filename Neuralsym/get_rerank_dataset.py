@@ -431,12 +431,8 @@ if __name__ == "__main__":
     parser.add_argument("--candidate_size", help="beam size", type=int, default=10)
     parser.add_argument("--forward_beam_size", help="beam size", type=int, default=1)
     parser.add_argument('--max_length', type=int, default=350)
-    parser.add_argument("--batch", help="batch", type=int, default=0)
-    parser.add_argument("--small_batch", help="batch", type=int, default=0)
-    parser.add_argument("--gpu", help="gpu", type=int, default=0)
 
     args = parser.parse_args()
-    os.environ["CUDA_VISIBLE_DEVICES"] = "%s"%args.gpu
     device_neuralsym = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
@@ -505,6 +501,6 @@ if __name__ == "__main__":
     for epoch in trange(0, len(tasks)):
         get_candidate_result(tasks[epoch])
 
-    with open('candidate_dataset.json'%(args.batch, args.small_batch), 'w') as f:
+    with open('candidate_dataset.json', 'w') as f:
         f.write(json.dumps(candidate_result, indent=4))
 
