@@ -3,7 +3,7 @@
 This repository contains an implementation of ["Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models"](https://openreview.net/pdf?id=oLfq1KKneW), which is a general and principled framework for controllable molecule synthetic route generation.  
 
 ## Warning 
-***We only use on route for each molecule in the training dataset for model training!!!***
+***We only use one route for each molecule in the training dataset for model training!!!***
 
 ## Dropbox 
 
