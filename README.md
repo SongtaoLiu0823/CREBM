@@ -74,7 +74,7 @@ cd ..
 ```
 
 ### 3. Train the enegy function
-Once you have obtained $\mathcal{D}$ (candidate_dataset.json), you can use it to train the energy function. But we first use pretrain the energy function on the [target -> starting material] task. 
+Once you have obtained $\mathcal{D}$ (candidate_dataset.json), you can use it to train the energy function. But we first pretrain the energy function on the [target -> starting material] task. 
 ```bash
 #copy dataset to Energy_folder
 cp train_dataset.json Energy_function/
@@ -83,11 +83,11 @@ cd Energy_function
 #dataset canolize
 python to_canolize.py --dataset train  
 
-#get pretrain dataset
+#get pretrained dataset
 python get_pretrain_dataset.py
 python train.py --batch_size 32  
 ```
-Or Skip the pre-training since we have provided the pretrain reward model
+Or Skip the pre-training since we have provided the pretrained reward model
 
 Then train the energy function
 ```bash
